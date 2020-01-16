@@ -139,7 +139,7 @@ class App extends Component {
           
            
            
-            <Card width="100%" height="1140px"gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr" opacity="0.7" padding="5px">
+            <Card width="100%" height="1140px"gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr" opacity="0.7" padding="5px" onMouseEnter={(e) => e.target.style.opacity="1" } onMouseLeave={(e) => e.target.style.opacity="0.7" }>
               <Img src={meLG}/>
               <Title size="30px"> &nbsp; Education <br/>
               <br />&nbsp; B.A. History UC Berkeley 2012 <br />
@@ -154,13 +154,13 @@ class App extends Component {
            
            
            
-            <Card width="100%" height="1140px" gridTemplateColumns="1fr 1fr" opacity="0.4" padding="5px">
-              <Title onClick={() => window.open ('https://github.com/atocchi/')}>Github</Title>
-              <img src={old} onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/>
-              <img src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/>
-              <img src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/>
-              <img src={hang} onClick={() => window.open ('https://atocchi.github.io/hangman/')}/>
-              <img src={friend} onClick={() => window.open ('https://thawing-brushlands-79973.herokuapp.com/')}/>
+            <Card width="100%" height="1140px" gridTemplateColumns="1fr 1fr" opacity="0.4" padding="5px" onMouseEnter={(e) => e.target.style.opacity="1" } onMouseLeave={(e) => e.target.style.opacity="0.4" }>
+              <Title onMouseEnter={(e)=> e.target.style.color="#89FAFA"} onMouseLeave={(e)=> e.target.style.color="#000000"} onClick={() => window.open ('https://github.com/atocchi/')}>Github</Title>
+              <img borderRadius="8px" border="1px, solid, #021a40;" src={old}  onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/>
+              <img borderRadius="8px" border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/>
+              <img borderRadius="8px" border="1px, solid, #021a40;" src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/>
+              <img borderRadius="8px" border="1px, solid, #021a40;" src={hang} onClick={() => window.open ('https://atocchi.github.io/hangman/')}/>
+              <img borderRadius="8px" border="1px, solid, #021a40;" src={friend} onClick={() => window.open ('https://thawing-brushlands-79973.herokuapp.com/')}/>
             </Card>
           
           </Container>
