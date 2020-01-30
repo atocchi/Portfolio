@@ -121,8 +121,8 @@ class App extends Component {
               <Card width="100%"   height="900px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr">
                  
                 <Container gridTemplateColumns="0fr 1fr" gridGap="15px"> 
-                <Title>Languages</Title>
-                <Tooltip title="JavaScript" arrow><img src={js} alt={"JavaScript"} onClick={() => window.open ('https://en.wikipedia.org/wiki/JavaScript')}/></Tooltip>
+                <Title style={{marginLeft: 5, marginTop: 10}}>Languages</Title>
+                <Tooltip title="JavaScript" arrow><img src={js} style={{marginTop: 5}} alt={"JavaScript"} onClick={() => window.open ('https://en.wikipedia.org/wiki/JavaScript')}/></Tooltip>
                 <Tooltip title="FireBase" arrow><img src={fb} onClick={() => window.open ('https://en.wikipedia.org/wiki/firebase')}/></Tooltip>
                 <Tooltip title="Node.js" arrow><img src={node} onClick={() => window.open ('https://en.wikipedia.org/wiki/node.js')}/></Tooltip>
                 <Tooltip title="MySQL" arrow><img src={mysql} onClick={() => window.open ('https://en.wikipedia.org/wiki/mysql')}/></Tooltip>
@@ -141,11 +141,11 @@ class App extends Component {
           
            
            
-            <Card width="100%" height="1140px"gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr" opacity="0.7" padding="5px" onMouseEnter={(e) => e.target.style.opacity="1" } onMouseLeave={(e) => e.target.style.opacity="0.7" }>
-              <Img src={meLG}/>
+            <Card width="100%" height="1140px"gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr" >
+              <Img style={{marginLeft: 100}}src={meLG}/>
               <Title size="30px"> &nbsp; Education <br/>
-              <br />&nbsp; B.A. History UC Berkeley 2012 <br />
-              &nbsp; B.A. Art Practice UC Berkeley 2012</Title>
+              <br />&nbsp; B.A. History<br />&nbsp; UC Berkeley 2012 <br />
+              &nbsp; B.A. Art Practice<br />&nbsp; UC Berkeley 2012</Title>
             <div>
               <Paragraph> Greetings, my name is Andrew Tocchi and this is my personal bio.I have a great interest in technology, it spans the gap between things like SDR to simple networking and website design. I enjoy learning and growing when it comes to emerging tech or new fields of study. I take great pride in my ability to troubleshoot complex issues and to makes sense of chaos.</Paragraph>
               <Paragraph> I worked as an educator for several years and then worked as a buisness techinican for a major ISP. Nowadays I am working as an IT Sysadmin in the Transit Industry, and greatly enjoy the large scope of my work. I am constantly learning on the job and in my daily life and I never turn down a chance to expand my wealth of knowledge.</Paragraph>
@@ -156,8 +156,8 @@ class App extends Component {
            
            
            
-            <Card width="100%" height="1140px" gridTemplateColumns="1fr 1fr" opacity="0.4" padding="5px" onMouseEnter={(e) => e.target.style.opacity="1" } onMouseLeave={(e) => e.target.style.opacity="0.4" }>
-              <Title onMouseEnter={(e)=> e.target.style.color="#89FAFA"} onMouseLeave={(e)=> e.target.style.color="#000000"} onClick={() => window.open ('https://github.com/atocchi/')}>Projects</Title>
+            <Card width="100%" height="1140px" gridTemplateColumns="1fr 1fr">
+              <Title style={{marginLeft: 5}} onMouseEnter={(e)=> e.target.style.color="#89FAFA"} onMouseLeave={(e)=> e.target.style.color="#000000"} onClick={() => window.open ('https://github.com/atocchi/')}>Projects</Title>
               <Tooltip title="A sample Bootstrap Portfolio" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={old}  onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/></Tooltip>
               <Tooltip title="A handlebars application that uses MySQL with CRUD functions to add and remove burgers" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/></Tooltip>
               <Tooltip title="A RootBeer counting game using DOM manipulation and Math, random" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/></Tooltip>
