@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Tooltip from '@material-ui/core/Tooltip';
+
 import styled from 'styled-components';
 import cliff from './img/cliff.jpg';
 import me from './img/me.jpg'
@@ -120,13 +122,13 @@ class App extends Component {
                  
                 <Container gridTemplateColumns="0fr 1fr" gridGap="15px"><Button borderRadius="30px" width="50px">Skills</Button>
                 <Title>Languages</Title>
-                <img src={js} onClick={() => window.open ('https://en.wikipedia.org/wiki/JavaScript')}/>
-                <img src={fb} onClick={() => window.open ('https://en.wikipedia.org/wiki/firebase')}/>
-                <img src={node} onClick={() => window.open ('https://en.wikipedia.org/wiki/node.js')}/>
-                <img src={mysql} onClick={() => window.open ('https://en.wikipedia.org/wiki/mysql')}/>
-                <img src={html} onClick={() => window.open ('https://en.wikipedia.org/wiki/html')}/> 
-                <img src={racket} onClick={() => window.open ('https://en.wikipedia.org/wiki/Racket_(programming_language)')}/>
-                <img src={mongo} onClick={() => window.open ('https://en.wikipedia.org/wiki/mongodb')}/>
+                <Tooltip title="JavaScript" arrow><img src={js} alt={"JavaScript"} onClick={() => window.open ('https://en.wikipedia.org/wiki/JavaScript')}/></Tooltip>
+                <Tooltip title="FireBase" arrow><img src={fb} onClick={() => window.open ('https://en.wikipedia.org/wiki/firebase')}/></Tooltip>
+                <Tooltip title="Node.js" arrow><img src={node} onClick={() => window.open ('https://en.wikipedia.org/wiki/node.js')}/></Tooltip>
+                <Tooltip title="MySQL" arrow><img src={mysql} onClick={() => window.open ('https://en.wikipedia.org/wiki/mysql')}/></Tooltip>
+                <Tooltip title="HTML" arrow><img src={html} onClick={() => window.open ('https://en.wikipedia.org/wiki/html')}/></Tooltip> 
+                <Tooltip title="Racket" arrow><img src={racket} onClick={() => window.open ('https://en.wikipedia.org/wiki/Racket_(programming_language)')}/></Tooltip>
+                <Tooltip title="MongoDB" arrow><img src={mongo} onClick={() => window.open ('https://en.wikipedia.org/wiki/mongodb')}/></Tooltip>
         
                 
                 
@@ -156,11 +158,11 @@ class App extends Component {
            
             <Card width="100%" height="1140px" gridTemplateColumns="1fr 1fr" opacity="0.4" padding="5px" onMouseEnter={(e) => e.target.style.opacity="1" } onMouseLeave={(e) => e.target.style.opacity="0.4" }>
               <Title onMouseEnter={(e)=> e.target.style.color="#89FAFA"} onMouseLeave={(e)=> e.target.style.color="#000000"} onClick={() => window.open ('https://github.com/atocchi/')}>Github</Title>
-              <img borderRadius="8px" border="1px, solid, #021a40;" src={old}  onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/>
-              <img borderRadius="8px" border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/>
-              <img borderRadius="8px" border="1px, solid, #021a40;" src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/>
-              <img borderRadius="8px" border="1px, solid, #021a40;" src={hang} onClick={() => window.open ('https://atocchi.github.io/hangman/')}/>
-              <img borderRadius="8px" border="1px, solid, #021a40;" src={friend} onClick={() => window.open ('https://thawing-brushlands-79973.herokuapp.com/')}/>
+              <Tooltip title="A sample Bootstrap Portfolio" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={old}  onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/></Tooltip>
+              <Tooltip title="A handlebars application that uses MySQL with CRUD functions to add and remove burgers" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/></Tooltip>
+              <Tooltip title="A RootBeer counting game using DOM manipulation and Math, random" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/></Tooltip>
+              <Tooltip title="A hangman game that use array manipulation to register possible guesses" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={hang} onClick={() => window.open ('https://atocchi.github.io/hangman/')}/></Tooltip>
+              <Tooltip title="An app that uses fetch along with CRUD functions to match the user with friends" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={friend} onClick={() => window.open ('https://thawing-brushlands-79973.herokuapp.com/')}/></Tooltip>
             </Card>
           
           </Container>
