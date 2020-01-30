@@ -18,7 +18,7 @@ import beer from './img/beer.png'
 import burg from './img/burg.png'
 import hang from './img/hang.png'
 import friend from './img/friend.png'
-
+import git from './img/git.png'
 const Button = styled.button`
   background-color: ${props => props.backgroundColor  || "#4c84ff" } ;
   color:white;
@@ -109,7 +109,7 @@ class App extends Component {
           <Container margin="30px 0px 0px 0px" padding="0px" gridTemplateColumns="1fr 1fr 1fr" >
             <Container padding="0px" gridTemplateRows="auto auto" gridGap="20px">
               <Card width="100%" height="200px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr" padding="10px">
-                <Title padding="20px">React Apps&nbsp;&nbsp;&nbsp;<img src={react} onClick={() => window.open ('https://en.wikipedia.org/wiki/React_(web_framework)')}/></Title>
+                <Title padding="20px">Github&nbsp;&nbsp;&nbsp;<Tooltip title="Click Here for My GitHub" arrow><img src={git} onClick={() => window.open ('https://github.com/atocchi')}/></Tooltip></Title>
                 
                 <Container gridTemplateColumns="auto auto auto auto" gridGap="5px" padding="20px">
                   <Button onClick={() => window.open ('https://github.com/atocchi/ReactForum')} backgroundColor="grey" borderRadius="30px"  width="100%">ReactF</Button>
@@ -120,7 +120,7 @@ class App extends Component {
               </Card>
               <Card width="100%"   height="900px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr">
                  
-                <Container gridTemplateColumns="0fr 1fr" gridGap="15px"><Button borderRadius="30px" width="50px">Skills</Button>
+                <Container gridTemplateColumns="0fr 1fr" gridGap="15px"> 
                 <Title>Languages</Title>
                 <Tooltip title="JavaScript" arrow><img src={js} alt={"JavaScript"} onClick={() => window.open ('https://en.wikipedia.org/wiki/JavaScript')}/></Tooltip>
                 <Tooltip title="FireBase" arrow><img src={fb} onClick={() => window.open ('https://en.wikipedia.org/wiki/firebase')}/></Tooltip>
@@ -157,7 +157,7 @@ class App extends Component {
            
            
             <Card width="100%" height="1140px" gridTemplateColumns="1fr 1fr" opacity="0.4" padding="5px" onMouseEnter={(e) => e.target.style.opacity="1" } onMouseLeave={(e) => e.target.style.opacity="0.4" }>
-              <Title onMouseEnter={(e)=> e.target.style.color="#89FAFA"} onMouseLeave={(e)=> e.target.style.color="#000000"} onClick={() => window.open ('https://github.com/atocchi/')}>Github</Title>
+              <Title onMouseEnter={(e)=> e.target.style.color="#89FAFA"} onMouseLeave={(e)=> e.target.style.color="#000000"} onClick={() => window.open ('https://github.com/atocchi/')}>Projects</Title>
               <Tooltip title="A sample Bootstrap Portfolio" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={old}  onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/></Tooltip>
               <Tooltip title="A handlebars application that uses MySQL with CRUD functions to add and remove burgers" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/></Tooltip>
               <Tooltip title="A RootBeer counting game using DOM manipulation and Math, random" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/></Tooltip>
