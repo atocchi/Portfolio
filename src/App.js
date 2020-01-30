@@ -119,8 +119,8 @@ class App extends Component {
             <Button onClick={() => window.open ('https://twitter.com/littlebleed')} borderRadius="30px">Follow</Button>
           </Card>
           <Kontainer margin="30px 0px 0px 0px" padding="0px" gridTemplateColumns="1fr 1fr 1fr" >
-            <Container padding="0px" gridTemplateRows="auto auto" gridGap="20px">
-              <Card width="100%" height="200px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr" padding="10px">
+            <Container padding="0px" gridTemplateRows="auto auto" gridGap="15px">
+              <Card width="100%" height="200px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr">
                 <Title padding="20px">Github&nbsp;&nbsp;&nbsp;<Tooltip title="Click Here for My GitHub" arrow><img src={git} onClick={() => window.open ('https://github.com/atocchi')}/></Tooltip></Title>
                 
                 <Container gridTemplateColumns="auto auto auto auto" gridGap="5px" padding="20px">
