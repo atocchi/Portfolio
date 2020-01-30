@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACE,eAAgB,CAChB,wBAA4B,CAC5B,kEACF","file":"main.8dcebdb8.chunk.css","sourcesContent":["body {\n  margin-top: 40px;\n  background-color: whitesmoke;\n  background-image: url('./img/cliffbg.jpg')\n}\n\n"]}

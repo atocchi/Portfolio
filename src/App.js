@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tooltip from '@material-ui/core/Tooltip';
-
+//This comment is just to update master to test for a fix for the websocket issue IGNORE
 import styled from 'styled-components';
 import cliff from './img/cliff.jpg';
 import me from './img/me.jpg'
@@ -19,6 +19,7 @@ import burg from './img/burg.png'
 import hang from './img/hang.png'
 import friend from './img/friend.png'
 import git from './img/git.png'
+
 const Button = styled.button`
   background-color: ${props => props.backgroundColor  || "#4c84ff" } ;
   color:white;
