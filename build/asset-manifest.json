@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0cc373cf.chunk.css",
+    "main.js": "/static/js/main.31fcb9f8.chunk.js",
+    "main.js.map": "/static/js/main.31fcb9f8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1a63ad0f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1a63ad0f.js.map",
+    "static/js/2.6a94be2e.chunk.js": "/static/js/2.6a94be2e.chunk.js",
+    "static/js/2.6a94be2e.chunk.js.map": "/static/js/2.6a94be2e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3fc6d78e59a5450f3fc2036765c44498.js": "/precache-manifest.3fc6d78e59a5450f3fc2036765c44498.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.0cc373cf.chunk.css.map": "/static/css/main.0cc373cf.chunk.css.map",
+    "static/js/2.6a94be2e.chunk.js.LICENSE": "/static/js/2.6a94be2e.chunk.js.LICENSE",
+    "static/media/beer.png": "/static/media/beer.b1820082.png",
+    "static/media/burg.png": "/static/media/burg.e77939b9.png",
+    "static/media/cliff.jpg": "/static/media/cliff.1b7baaf5.jpg",
+    "static/media/index.css": "/static/media/cliffbg.4828bbf9.jpg",
+    "static/media/fb.png": "/static/media/fb.af3df233.png",
+    "static/media/friend.png": "/static/media/friend.17ab0fde.png",
+    "static/media/hang.png": "/static/media/hang.e9d81012.png",
+    "static/media/html.png": "/static/media/html.f4229ef7.png",
+    "static/media/meLG.jpg": "/static/media/meLG.2dda71ee.jpg",
+    "static/media/node.png": "/static/media/node.ce912c3f.png",
+    "static/media/old.png": "/static/media/old.3a3eb751.png",
+    "static/media/racket.png": "/static/media/racket.6d5e3a32.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a63ad0f.js",
+    "static/js/2.6a94be2e.chunk.js",
+    "static/css/main.0cc373cf.chunk.css",
+    "static/js/main.31fcb9f8.chunk.js"
+  ]
+}
