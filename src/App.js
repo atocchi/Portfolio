@@ -64,6 +64,17 @@ const Container = styled.section`
   grid-gap: ${props => props.gridGap || "30px" };
   boxshadow: 10px 10px;
 `
+const Kontainer = styled.section`
+display:grid;
+  margin: ${props => props.margin || "0px"};
+  padding: ${props => props.padding  ||  "0px 30px"};
+  grid-template-columns: ${props => props.gridTemplateColumns || ""};
+  grid-gap: ${props => props.gridGap || "30px" };
+  boxshadow: 10px 10px;
+  @media only screen and (max-width: 600px) {
+  grid-template-columns: 1fr;
+  }
+`
 
 const Title = styled.h1`
   margin:0;
@@ -106,7 +117,7 @@ class App extends Component {
             </section>
             <Button onClick={() => window.open ('https://twitter.com/littlebleed')} borderRadius="30px">Follow</Button>
           </Card>
-          <Container margin="30px 0px 0px 0px" padding="0px" gridTemplateColumns="1fr 1fr 1fr" >
+          <Kontainer margin="30px 0px 0px 0px" padding="0px" gridTemplateColumns="1fr 1fr 1fr" >
             <Container padding="0px" gridTemplateRows="auto auto" gridGap="20px">
               <Card width="100%" height="200px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr" padding="10px">
                 <Title padding="20px">Github&nbsp;&nbsp;&nbsp;<Tooltip title="Click Here for My GitHub" arrow><img src={git} onClick={() => window.open ('https://github.com/atocchi')}/></Tooltip></Title>
@@ -159,13 +170,13 @@ class App extends Component {
             <Card width="100%" height="1140px" gridTemplateColumns="1fr 1fr">
               <Title style={{marginLeft: 5}} onMouseEnter={(e)=> e.target.style.color="#89FAFA"} onMouseLeave={(e)=> e.target.style.color="#000000"} onClick={() => window.open ('https://github.com/atocchi/')}>Projects</Title>
               <Tooltip title="A sample Bootstrap Portfolio" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={old}  onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/></Tooltip>
-              <Tooltip title="A handlebars application that uses MySQL with CRUD functions to add and remove burgers" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/></Tooltip>
+              <Tooltip title="A handlebars application that uses MySQL with CRUD functions to add and remove burgers" arrow><img borderRadius="8px" style={{marginLeft: 5}} border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/></Tooltip>
               <Tooltip title="A RootBeer counting game using DOM manipulation and Math, random" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/></Tooltip>
-              <Tooltip title="A hangman game that use array manipulation to register possible guesses" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={hang} onClick={() => window.open ('https://atocchi.github.io/hangman/')}/></Tooltip>
+              <Tooltip title="A hangman game that use array manipulation to register possible guesses" arrow><img borderRadius="8px" style={{marginLeft: 5}} border="1px, solid, #021a40;" src={hang} onClick={() => window.open ('https://atocchi.github.io/hangman/')}/></Tooltip>
               <Tooltip title="An app that uses fetch along with CRUD functions to match the user with friends" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={friend} onClick={() => window.open ('https://thawing-brushlands-79973.herokuapp.com/')}/></Tooltip>
             </Card>
           
-          </Container>
+          </Kontainer>
           
         
         </Container>
