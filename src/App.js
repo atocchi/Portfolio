@@ -19,6 +19,7 @@ import burg from './img/burg.png'
 import hang from './img/hang.png'
 import friend from './img/friend.png'
 import git from './img/git.png'
+import linked from './img/linked.png'
 
 const Button = styled.button`
   background-color: ${props => props.backgroundColor  || "#4c84ff" } ;
@@ -121,10 +122,10 @@ class App extends Component {
           <Kontainer margin="30px 0px 0px 0px" padding="0px" gridTemplateColumns="1fr 1fr 1fr" >
             <Container padding="0px" gridTemplateRows="auto auto" gridGap="15px">
               <Card width="100%" height="200px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr">
-                <Title padding="20px">Github&nbsp;&nbsp;&nbsp;<Tooltip title="Click Here for My GitHub" arrow><img src={git} onClick={() => window.open ('https://github.com/atocchi')}/></Tooltip></Title>
+                <Title padding="20px">Github&nbsp;<Tooltip title="Click Here for My GitHub" arrow><img src={git} onClick={() => window.open ('https://github.com/atocchi')}/></Tooltip>&nbsp;Linkedin&nbsp;<Tooltip title="Click here for my Linkedin" arrow><img src={linked} onClick={() => window.open ('https://www.linkedin.com/in/andrew-tocchi/')}/></Tooltip></Title>
                 
                 <Container gridTemplateColumns="auto auto auto auto" gridGap="5px" padding="20px">
-                  <Button onClick={() => window.open ('https://github.com/atocchi/ReactForum')} backgroundColor="grey" borderRadius="30px"  width="100%">ReactF</Button>
+                  <Button onClick={() => window.open ('https://github.com/atocchi/ReactForum')} backgroundColor="grey" borderRadius="30px"  width="100%">contact me:</Button>
                   <Button onClick={() => window.open ('https://github.com/atocchi/cherrio')} backgroundColor="grey" borderRadius="30px" width="100%">ReactStripper</Button>
                   <Button backgroundColor="grey" borderRadius="30px" width="100%">ReactProject</Button>
                   <Button backgroundColor="grey" borderRadius="30px" width="100%">NextJS sample</Button>
@@ -154,7 +155,7 @@ class App extends Component {
            
            
             <Card width="100%" height="1140px"gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr" >
-              <Img style={{marginLeft: 100}}src={meLG}/>
+              <Img style={{alignSelf: 'sretch'}}src={meLG}/>
               <Title size="30px"> &nbsp; Education <br/>
               <br />&nbsp; B.A. History<br />&nbsp; UC Berkeley 2012 <br />
               &nbsp; B.A. Art Practice<br />&nbsp; UC Berkeley 2012</Title>
