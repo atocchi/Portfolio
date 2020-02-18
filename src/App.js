@@ -47,6 +47,28 @@ const Card = styled.section`
   align-items:center;
   padding: ${props => props.padding || "0px"};
   opacity: ${props => props.opacity || "1"};
+  @media only screen and (max-width: 600px) {
+    width : 375px;
+    length: 100%;
+    }
+`
+const Kard = styled.section`
+  height: ${props => props.height || "0px" };
+  width: ${props => props.width || "0px"};
+  background-color:white;
+  border-radius: ${ props => props.borderRadius || "30px"};
+  display: grid;
+  grid-template-rows: ${props => props.gridTemplateRows || ""};
+  grid-template-columns: ${ props => props.gridTemplateColumns || "1fr 2fr 1fr"};
+  align-items:center;
+  padding: ${props => props.padding || "0px"};
+  opacity: ${props => props.opacity || "1"};
+  @media only screen and (max-width: 600px) {
+    width : 375px;
+    length: 100%;
+    grid-template-columns: 1fr;
+    padding-left: 50px;
+    }
 `
 
 const Profile = styled.div`
@@ -65,6 +87,9 @@ const Container = styled.section`
   grid-template-columns: ${props => props.gridTemplateColumns || ""};
   grid-gap: ${props => props.gridGap || "30px" };
   boxshadow: 10px 10px;
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    }
 `
 const Kontainer = styled.section`
 display:grid;
@@ -97,6 +122,13 @@ border-radius: 50%;
 padding: 10px;
 grid-gap: 30px;
 `
+const Emog = styled.img`
+@media only screen and (max-width: 600px) {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  }
+`
 
 
 class App extends Component {
@@ -122,26 +154,22 @@ class App extends Component {
           <Kontainer margin="30px 0px 0px 0px" padding="0px" gridTemplateColumns="1fr 1fr 1fr" >
             <Container padding="0px" gridTemplateRows="auto auto" gridGap="15px">
               <Card width="100%" height="200px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr">
-                <Title padding="20px">Github&nbsp;<Tooltip title="Click Here for My GitHub" arrow><img src={git} onClick={() => window.open ('https://github.com/atocchi')}/></Tooltip>&nbsp;Linkedin&nbsp;<Tooltip title="Click here for my Linkedin" arrow><img src={linked} onClick={() => window.open ('https://www.linkedin.com/in/andrew-tocchi/')}/></Tooltip></Title>
+                <Title>&nbsp;&nbsp;Github&nbsp;<Tooltip title="Click Here for My GitHub" arrow><img src={git} onClick={() => window.open ('https://github.com/atocchi')}/></Tooltip>&nbsp;</Title>
+                <Title>&nbsp;&nbsp;Linkedin&nbsp;<Tooltip title="Click here for my Linkedin" arrow><img src={linked} onClick={() => window.open ('https://www.linkedin.com/in/andrew-tocchi/')}/></Tooltip></Title>
+                <Title size="25px" padding="20px"><a  href="mailto:andrewtocchi@gmail.com">andrewtocchi@gmail.com</a></Title>
                 
-                <Container gridTemplateColumns="auto auto auto auto" gridGap="5px" padding="20px">
-                  <Button onClick={() => window.open ('https://github.com/atocchi/ReactForum')} backgroundColor="grey" borderRadius="30px"  width="100%">contact me:</Button>
-                  <Button onClick={() => window.open ('https://github.com/atocchi/cherrio')} backgroundColor="grey" borderRadius="30px" width="100%">ReactStripper</Button>
-                  <Button backgroundColor="grey" borderRadius="30px" width="100%">ReactProject</Button>
-                  <Button backgroundColor="grey" borderRadius="30px" width="100%">NextJS sample</Button>
-                </Container>
               </Card>
               <Card width="100%"   height="900px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr">
                  
-                <Container gridTemplateColumns="0fr 1fr" gridGap="15px"> 
+                <Container gridTemplateColumns="0fr 1fr"  gridGap="15px"> 
                 <Title style={{marginLeft: 5, marginTop: 10}}>Languages</Title>
-                <Tooltip title="JavaScript" arrow><img src={js} style={{marginTop: 5}} alt={"JavaScript"} onClick={() => window.open ('https://en.wikipedia.org/wiki/JavaScript')}/></Tooltip>
-                <Tooltip title="FireBase" arrow><img src={fb} onClick={() => window.open ('https://en.wikipedia.org/wiki/firebase')}/></Tooltip>
-                <Tooltip title="Node.js" arrow><img src={node} onClick={() => window.open ('https://en.wikipedia.org/wiki/node.js')}/></Tooltip>
-                <Tooltip title="MySQL" arrow><img src={mysql} onClick={() => window.open ('https://en.wikipedia.org/wiki/mysql')}/></Tooltip>
-                <Tooltip title="HTML" arrow><img src={html} onClick={() => window.open ('https://en.wikipedia.org/wiki/html')}/></Tooltip> 
-                <Tooltip title="Racket" arrow><img src={racket} onClick={() => window.open ('https://en.wikipedia.org/wiki/Racket_(programming_language)')}/></Tooltip>
-                <Tooltip title="MongoDB" arrow><img src={mongo} onClick={() => window.open ('https://en.wikipedia.org/wiki/mongodb')}/></Tooltip>
+                <Tooltip title="JavaScript" arrow><Emog src={js} style={{marginTop: 5}} alt={"JavaScript"} onClick={() => window.open ('https://en.wikipedia.org/wiki/JavaScript')}/></Tooltip>
+                <Tooltip title="FireBase" arrow><Emog src={fb} onClick={() => window.open ('https://en.wikipedia.org/wiki/firebase')}/></Tooltip>
+                <Tooltip title="Node.js" arrow><Emog src={node} onClick={() => window.open ('https://en.wikipedia.org/wiki/node.js')}/></Tooltip>
+                <Tooltip title="MySQL" arrow><Emog src={mysql} onClick={() => window.open ('https://en.wikipedia.org/wiki/mysql')}/></Tooltip>
+                <Tooltip title="HTML" arrow><Emog src={html} onClick={() => window.open ('https://en.wikipedia.org/wiki/html')}/></Tooltip> 
+                <Tooltip title="Racket" arrow><Emog src={racket} onClick={() => window.open ('https://en.wikipedia.org/wiki/Racket_(programming_language)')}/></Tooltip>
+                <Tooltip title="MongoDB" arrow><Emog src={mongo} onClick={() => window.open ('https://en.wikipedia.org/wiki/mongodb')}/></Tooltip>
         
                 
                 
@@ -155,7 +183,7 @@ class App extends Component {
            
            
             <Card width="100%" height="1140px"gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr" >
-              <Img style={{alignSelf: 'sretch'}}src={meLG}/>
+              <Img style={{margin: "auto"}}src={meLG}/>
               <Title size="30px"> &nbsp; Education <br/>
               <br />&nbsp; B.A. History<br />&nbsp; UC Berkeley 2012 <br />
               &nbsp; B.A. Art Practice<br />&nbsp; UC Berkeley 2012</Title>
@@ -169,14 +197,14 @@ class App extends Component {
            
            
            
-            <Card width="100%" height="1140px" gridTemplateColumns="1fr 1fr">
+            <Kard width="100%" height="1140px" gridTemplateColumns="1fr 1fr">
               <Title style={{marginLeft: 5}} onMouseEnter={(e)=> e.target.style.color="#89FAFA"} onMouseLeave={(e)=> e.target.style.color="#000000"} onClick={() => window.open ('https://github.com/atocchi/')}>Projects</Title>
               <Tooltip title="A sample Bootstrap Portfolio" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={old}  onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/></Tooltip>
               <Tooltip title="A handlebars application that uses MySQL with CRUD functions to add and remove burgers" arrow><img borderRadius="8px" style={{marginLeft: 5}} border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/></Tooltip>
               <Tooltip title="A RootBeer counting game using DOM manipulation and Math, random" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/></Tooltip>
               <Tooltip title="A hangman game that use array manipulation to register possible guesses" arrow><img borderRadius="8px" style={{marginLeft: 5}} border="1px, solid, #021a40;" src={hang} onClick={() => window.open ('https://atocchi.github.io/hangman/')}/></Tooltip>
               <Tooltip title="An app that uses fetch along with CRUD functions to match the user with friends" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={friend} onClick={() => window.open ('https://thawing-brushlands-79973.herokuapp.com/')}/></Tooltip>
-            </Card>
+            </Kard>
           
           </Kontainer>
           
