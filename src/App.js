@@ -156,7 +156,7 @@ class App extends Component {
               <Card width="100%" height="200px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr">
                 <Title>&nbsp;&nbsp;Github&nbsp;<Tooltip title="Click Here for My GitHub" arrow><img src={git} onClick={() => window.open ('https://github.com/atocchi')}/></Tooltip>&nbsp;</Title>
                 <Title>&nbsp;&nbsp;Linkedin&nbsp;<Tooltip title="Click here for my Linkedin" arrow><img src={linked} onClick={() => window.open ('https://www.linkedin.com/in/andrew-tocchi/')}/></Tooltip></Title>
-                <Title size="25px" padding="20px"><a  href="mailto:andrewtocchi@gmail.com">andrewtocchi@gmail.com</a></Title>
+                <Title size="25px" padding="20px"><a  href={"mailto:andrewtocchi@gmail.com"}>andrewtocchi@gmail.com</a></Title>
                 
               </Card>
               <Card width="100%"   height="900px" gridTemplateColumns="1fr" gridTemplateRows="1fr 1fr 1fr 1fr">
@@ -199,11 +199,11 @@ class App extends Component {
            
             <Kard width="100%" height="1140px" gridTemplateColumns="1fr 1fr">
               <Title style={{marginLeft: 5}} onMouseEnter={(e)=> e.target.style.color="#89FAFA"} onMouseLeave={(e)=> e.target.style.color="#000000"} onClick={() => window.open ('https://github.com/atocchi/')}>Projects</Title>
-              <Tooltip title="A sample Bootstrap Portfolio" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={old}  onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/></Tooltip>
-              <Tooltip title="A handlebars application that uses MySQL with CRUD functions to add and remove burgers" arrow><img borderRadius="8px" style={{marginLeft: 5}} border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/></Tooltip>
-              <Tooltip title="A RootBeer counting game using DOM manipulation and Math, random" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/></Tooltip>
-              <Tooltip title="A hangman game that use array manipulation to register possible guesses" arrow><img borderRadius="8px" style={{marginLeft: 5}} border="1px, solid, #021a40;" src={hang} onClick={() => window.open ('https://atocchi.github.io/hangman/')}/></Tooltip>
-              <Tooltip title="An app that uses fetch along with CRUD functions to match the user with friends" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={friend} onClick={() => window.open ('https://thawing-brushlands-79973.herokuapp.com/')}/></Tooltip>
+              <container><Tooltip title="A sample Bootstrap Portfolio" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={old}  onClick={() => window.open ('https://atocchi.github.io/Bootstrap-Portfolio/')}/></Tooltip><Button onClick={() => window.open ('https://github.com/atocchi/Responsive-Portfolio')}>Github</Button></container>
+              <container><Tooltip title="A handlebars application that uses MySQL with CRUD functions to add and remove burgers" arrow><img borderRadius="8px" style={{marginLeft: 5}} border="1px, solid, #021a40;" src={burg} onClick={() => window.open ('https://ancient-lake-27110.herokuapp.com/')}/></Tooltip><Button onClick={() => window.open ('https://github.com/atocchi/hamburg')}>Github</Button></container>
+              <container><Tooltip title="A RootBeer counting game using DOM manipulation and Math, random" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={beer} onClick={() => window.open ('https://atocchi.github.io/unit-4-game/')}/></Tooltip><Button onClick={() => window.open ('https://github.com/atocchi/unit-4-game')}>Github</Button></container>
+              <container><Tooltip title="A hangman game that use array manipulation to register possible guesses" arrow><img borderRadius="8px" style={{marginLeft: 5}} border="1px, solid, #021a40;" src={hang} onClick={() => window.open ('https://atocchi.github.io/hangman/')}/></Tooltip><Button onClick={() => window.open ('https://github.com/atocchi/hangman')}>Github</Button></container>
+              <container><Tooltip title="An app that uses fetch along with CRUD functions to match the user with friends" arrow><img borderRadius="8px" border="1px, solid, #021a40;" src={friend} onClick={() => window.open ('https://thawing-brushlands-79973.herokuapp.com/')}/></Tooltip><Button onClick={() => window.open ('https://github.com/atocchi/friends')}>Github</Button></container>
             </Kard>
           
           </Kontainer>
