@@ -1,6 +1,6 @@
 # Portfolio
 Resume/Portfolio
-![portfolio](sniper.png)
+![portfolio](sniper.PNG)
 
 This is a simple portfolio using react, and hosted on AWS.
 
